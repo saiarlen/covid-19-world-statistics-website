@@ -262,3 +262,8 @@ footer {
 .chide {
     display: none;
 }
+
+path[fill= "#222"] {
+	cursor: not-allowed !important;
+    pointer-events: none !important;
+  }

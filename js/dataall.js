@@ -1,6 +1,6 @@
+/* Json data request */
 var xmlhttp = new XMLHttpRequest();
 var url = "https://corona.lmao.ninja/countries";
-
 
 
 xmlhttp.onreadystatechange = function() {
@@ -15,9 +15,8 @@ xmlhttp.send();
 
 
 
-
+/* Looping array of data*/
 function coronaFunction(arr) {
-
 
     var totalCases = {};
     var cActive = {};
@@ -25,8 +24,6 @@ function coronaFunction(arr) {
     var cDead = {};
     var cToday = {};
     var cFlag = {};
-
-
 
 
     var i;
@@ -44,7 +41,7 @@ function coronaFunction(arr) {
 
 
 
-
+/* Map Init and setup */
     jQuery(function() {
         var $ = jQuery;
 
@@ -70,26 +67,18 @@ function coronaFunction(arr) {
                 }]
             },
             onRegionTipShow: function(e, el, code) {
-                var unsel = ["BW", "SS", "LS", "MW", "BI", "SL", "XS", "EH", "YE", "TM", "TJ", "TF", "KP", "FK", "PR"];
 
-                if ((code != "BW") || (code != "SS") || (code != "LS") || (code != "MW") || (code != "BI") || (code != "SL") || (code != "XS") || (code != "EH") || (code != "YE") || (code != "TM") || (code != "TJ") || (code != "TF") || (code != "KP") || (code != "FK") || (code != "PR")) {
+                el.html(
+                    '<img src="' + cFlag[code] + '">' +
+                    '<div class="title"><span><b>' + el.html() + '</b><span><br><span class="tiny">' + totalCases[code] + ' total cases</span></span></span></div>' +
+                    '<div class="info" style="background-color: #961515">' +
+                    '<span><span id="tipactive">' + cActive[code] + '</span> active</span><br>' +
+                    '<span><span id="tiprecovered">' + cRecover[code] + '</span> recovered</span><br>' +
+                    '<span><span id="tipdead">' + cDead[code] + '</span> dead</span><br>' +
+                    '<hr><div class="changed"><span style="color: #ffbb11">TODAY</span><br><span>+ ' + cToday[code] + ' cases</span><br>' +
+                    '</div></div>'
 
-
-                    el.html(
-                        '<img src="' + cFlag[code] + '">' +
-                        '<div class="title"><span><b>' + el.html() + '</b><span><br><span class="tiny">' + totalCases[code] + ' total cases</span></span></span></div>' +
-                        '<div class="info" style="background-color: #961515">' +
-                        '<span><span id="tipactive">' + cActive[code] + '</span> active</span><br>' +
-                        '<span><span id="tiprecovered">' + cRecover[code] + '</span> recovered</span><br>' +
-                        '<span><span id="tipdead">' + cDead[code] + '</span> dead</span><br>' +
-                        '<hr><div class="changed"><span style="color: #ffbb11">TODAY</span><br><span>+ ' + cToday[code] + ' cases</span><br>' +
-                        '</div></div>'
-
-                    );
-
-
-                }
-
+                );
 
 
             },
@@ -97,9 +86,9 @@ function coronaFunction(arr) {
         });
 
     });
-
+/* End of map init */
 
 
 }
+/* End of function */
 
-//"BW", "SS", "LS", "MW", "BI", "SL", "XS", "EH", "YE", "TM", "TJ", "TF", "KP", "FK", "PR"
