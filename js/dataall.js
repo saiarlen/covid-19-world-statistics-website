@@ -14,7 +14,6 @@ xmlhttp.send();
 
 
 
-
 /* Looping array of data*/
 function coronaFunction(arr) {
 
@@ -41,7 +40,7 @@ function coronaFunction(arr) {
 
 
 
-/* Map Init and setup */
+    /* Map Init and setup */
     jQuery(function() {
         var $ = jQuery;
 
@@ -56,7 +55,7 @@ function coronaFunction(arr) {
             },
             series: {
                 regions: [{
-                    scale: ['#c45252', '#ed1515'],
+                    scale: ['#8c0000', '#f70000'],
                     normalizeFunction: 'polynomial',
                     values: totalCases,
                     cActive,
@@ -69,7 +68,7 @@ function coronaFunction(arr) {
             onRegionTipShow: function(e, el, code) {
 
                 el.html(
-                    '<img src="' + cFlag[code] + '">' +
+                    '<img src="img/flags/' + code.toLowerCase() + '.png">' +
                     '<div class="title"><span><b>' + el.html() + '</b><span><br><span class="tiny">' + totalCases[code] + ' total cases</span></span></span></div>' +
                     '<div class="info" style="background-color: #961515">' +
                     '<span><span id="tipactive">' + cActive[code] + '</span> active</span><br>' +
@@ -86,9 +85,8 @@ function coronaFunction(arr) {
         });
 
     });
-/* End of map init */
+    /* End of map init */
 
 
 }
 /* End of function */
-

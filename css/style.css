@@ -19,7 +19,8 @@ body {
 /*For Particle effect*/
 
 #particle {
-    background-color: #8c0000;
+    background: radial-gradient(#4a0000, #000000);
+    background-color: #3f0000;
     position: fixed;
     top: 0;
     right: 0;
@@ -232,10 +233,11 @@ footer {
     font-size: smaller;
     padding: 3px;
     transition: opacity 0.25s ease;
-    width: 120px;
+    width: 150px;
     border: 1px solid white;
     border-radius: 4px;
     text-align: center;
+    pointer-events: none !important;
 }
 
 .jvectormap-tip img {
@@ -263,7 +265,7 @@ footer {
     display: none;
 }
 
-path[fill= "#222"] {
-	cursor: not-allowed !important;
+path[fill="#222"] {
+    cursor: not-allowed !important;
     pointer-events: none !important;
-  }
+}
