@@ -7,9 +7,6 @@ The purpose of this project is to provide, Real-time updates on the number of co
 <br>
 <br>
 <br>
-<br>
-
-
 
 
 #### Where COVID-19 data is coming?
@@ -17,16 +14,15 @@ The Website is pulling all up-to-date COVID-19 data from Novel Covid which is an
 All information that is provided by our API updates every 10 minutes, giving the best and reliable results.
 You can find more details regarding Novel Covid API from their GitHub account.<br>
 
-**API Links**
+**API Links**<br>
 https://github.com/NovelCOVID/API <br>
 https://corona.lmao.ninja/all <br>
 https://corona.lmao.ninja/countries <br>
 
 
-
 <br>
 <br>
-<br>
+<a href="//saiarlen.com/covid">Demo Site</a>
 <br>
 
 
