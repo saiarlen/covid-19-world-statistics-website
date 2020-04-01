@@ -370,3 +370,54 @@ path[fill="#222"] {
 .m-git a i {
     color: #e0e0e0;
 }
+
+
+/* top text */
+
+.notif {
+    position: absolute;
+    z-index: 99999;
+    color: #d3c2c2;
+    top: 0;
+    left: 9px;
+    margin: 0;
+    font-size: 15px;
+}
+
+@media (max-width: 730px) {
+    .notif {
+        top: 2px;
+        left: 38px;
+        margin: 0;
+        font-size: 15px;
+        max-width: 300px
+    }
+}
+
+.notif-bottom {
+    display: none;
+    color: #d3c2c2;
+    font-size: 15px;
+}
+
+@media (max-width: 730px) {
+    .notif {
+        display: none;
+    }
+    .notif-bottom {
+        display: block;
+        color: #d3c2c2;
+        font-size: 13px;
+        margin: 0 0 5px 0;
+        text-align: center;
+    }
+    .has-lines {
+        margin: 0;
+    }
+}
+
+@media (max-width: 730px) {
+    .notif-bottom {
+        font-size: 12px;
+    }
+}
