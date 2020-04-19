@@ -2,8 +2,8 @@
 	'use strict';
 	
 	$(document).ready(function(){
-    let url = "https://corona.lmao.ninja/all";
-    let urlt = "https://corona.lmao.ninja/countries/" ;
+    let url = "https://corona.lmao.ninja/v2/all";
+    let urlt = "https://corona.lmao.ninja/v2/countries/" ;
     $.getJSON(url,function(data,status){
         $("#cov-total-confirm").append(data["cases"]);
         $("#cov-total-recoverd").append(data["recovered"]);

@@ -1,6 +1,6 @@
 /* Json data request */
 var xmlhttp = new XMLHttpRequest();
-var url = "https://corona.lmao.ninja/countries";
+var url = "https://corona.lmao.ninja/v2/countries";
 
 
 xmlhttp.onreadystatechange = function() {
